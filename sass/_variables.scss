@@ -15,6 +15,8 @@
     --new-stories-title-size: #{px2rem(32)};
     --new-stories-subtitle-size: #{px2rem(20)};
     --new-stories-subtitle-line-height: calc(24 / 20);
+    --top-stories-title-size: #{px2rem(18)};
+    --top-stories-rank-size: #{px2rem(32)};
 
     // Colours
     --primary: #5e607a;
@@ -42,6 +44,10 @@
     --new-stories-subtitle-margin: #{px2rem(8)};
     --new-stories-article-padding-start: #{px2rem(31)};
     --new-stories-article-padding-end: #{px2rem(29)};
+    --top-stories-gap: #{px2rem(24)};
+    --top-stories-margin: #{px2rem(32)};
+    --top-stories-rank-margin: #{px2rem(9)};
+    --top-stories-title-margin: #{px2rem(12)};
 
     @include css-media-queries($from-breakpoint: multicol-stories) {
         --hero-story-title-size: #{px2rem(56)};

@@ -1,0 +1,56 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Top stories */
+
+.top-stories {
+    list-style: none;
+    counter-reset: top-story-rank;
+    li {
+        margin-block-start: var(--top-stories-margin);
+        counter-increment: top-story-rank;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        column-gap: var(--top-stories-gap);
+    }
+    h2 {
+        font-size: var(--top-stories-title-size);
+        line-height: 1.5;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-block-end: var(--top-stories-title-margin);
+        &::before {
+            font-size: var(--top-stories-rank-size);
+            line-height: 1;
+            font-weight: bold;
+            color: var(--senary);
+            display: block;
+            margin-block-end: var(--top-stories-rank-margin);
+            content: counter(top-story-rank, decimal-leading-zero);
+        }
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+    a {
+        color: inherit;
+        transition: color 300ms ease-in;
+        &:hover,
+        &:focus {
+            color: var(--senary);
+        }
+    }
+    .illustration {
+        grid-row: span 2;
+        order: -1;
+    }
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        li {
+            display: inline-flex;
+            margin-block-start: initial;
+        }
+    }
+}

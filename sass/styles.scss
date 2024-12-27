@@ -10,7 +10,7 @@
 
 @use "./base/mixins" with (
     $media-queries-breakpoints: (
-        multicol-stories: 768
+        multicol-stories: 882
     )
 );
 @use "./variables";
@@ -21,3 +21,4 @@
 @use "./layout/layout";
 @use "./home/hero-story";
 @use "./home/new-stories";
+@use "./home/top-stories";
