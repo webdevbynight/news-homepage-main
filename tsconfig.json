@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "target": "ES2022",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "strictNullChecks": true,
+        "module": "NodeNext",
+        "rootDir": "ts",
+        "outDir": "js",
+        "sourceMap": true,
+        "lib": ["ES2022", "DOM", "DOM.Iterable"]
+    },
+    "exclude": ["./tools"]
+}
