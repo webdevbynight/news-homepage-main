@@ -8,18 +8,35 @@
     --font: Inter, sans-serif;
     --text-size: #{px2rem(15)};
     --text-line-height: calc(26 / 15);
+    --hero-story-title-size: #{px2rem(40)};
+    --hero-story-link-size: #{px2rem(14)};
+    --hero-story-link-line-height: calc(24 / 14);
+    --hero-story-link-letter-spacing: #{px2em(4.38, 14)};
 
     // Colours
     --primary: #5e607a;
+    --secondary: #00001a;
+    --tertiary: #c5c6ce;
+    --quaternary: #fffdfa;
+    --quinary: #e9aa52;
+    --senary: #f15d51;
     --primary-background: #fffdfa;
+    --secondary-background: #00001a;
+    --tertiary-background: #f15d51;
+    --quaternary-background: #5e607a;
 
     // Sizes, gaps, padding, margins
     --overall-size: calc(1110 / 1440 * 100dvi);
     --overall-padding: #{px2rem(28)} #{px2rem(16)};
     --header-margin: #{px2rem(32)};
     --content-inline-gap: #{px2rem(64)};
+    --hero-story-gap: #{px2rem(29)} #{px2rem(30)};
+    --hero-story-padding: #{px2rem(13)} #{px2rem(35)} #{px2rem(11)} #{px2rem(31)};
+    --hero-story-title-margin: #{px2rem(16)};
+    --hero-story-text-margin: #{px2rem(24)};
 
     @include css-media-queries($from-breakpoint: multicol-stories) {
+        --hero-story-title-size: #{px2rem(56)};
         --overall-margin: #{px2rem(89)} auto #{px2rem(129)};
         --header-margin: #{px2rem(55)};
         --content-block-gap: #{px2rem(30)};

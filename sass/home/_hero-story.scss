@@ -4,7 +4,60 @@
 /** @section Hero story */
 
 .hero-story {
+    display: grid;
+    h2 {
+        font-size: var(--hero-story-title-size);
+        font-weight: 800;
+        line-height: 1;
+        color: var(--secondary);
+        margin-block-end: var(--hero-story-title-margin);
+    }
+    p:not(:last-child) {
+        margin-block-end: var(--hero-story-text-margin);
+    }
+    img {
+        width: 100%;
+    }
+    a {
+        font-size: var(--hero-story-link-size);
+        line-height: var(--hero-story-link-line-height);
+        letter-spacing: var(--hero-story-link-letter-spacing);
+        font-weight: bold;
+        color: var(--secondary);
+        background: var(--tertiary-background);
+        text-transform: uppercase;
+        display: inline-block;
+        padding: var(--hero-story-padding);
+        transition: 300ms ease-in;
+        transition-property: color, background;
+        &:hover,
+        &:focus {
+            color: var(--quaternary);
+            background: var(--secondary-background);
+        }
+    }
+    .illustration {
+        order: -1;
+    }
     @include css-media-queries($from-breakpoint: multicol-stories) {
-        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--hero-story-gap);
+        h2,
+        p {
+            &:not(:last-child) {
+                margin-block-end: initial;
+            }
+            &:last-child {
+                align-self: end;
+            }
+        }
+        h2 {
+            grid-row: span 2;
+            align-self: center;
+        }
+        .illustration {
+            grid-column: span 2;
+        }
     }
 }

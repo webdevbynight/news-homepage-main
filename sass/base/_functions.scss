@@ -9,11 +9,12 @@
 /// Function conversion from pixels to em
 ///
 /// @param {Number} $px - The value to convert (it can be in pixels or unitless)
+/// @param {Number} $reference [16] - The font size reference (unitless, assumed to be in pixels)
 /// @returns {Number} The value converted into em
-@function px2em($px) {
+@function px2em($px, $reference: 16) {
     // If $px is unitless, it is assumed to be in pixels, so there is an attempt to convert it into pixels
     @if math.is-unitless($px) {
-        @return px2em($px * 1px);
+        @return px2em($px * 1px, $reference);
     }
 
     // If $px is compatible with em units, return the value unchanged
@@ -26,7 +27,7 @@
         @return math.div($px, 1rem) * 1em;
     }
 
-    @return math.div($px, 16px) * 1em;
+    @return math.div($px, $reference * 1px) * 1em;
 }
 
 /// Function conversion from pixels to rem

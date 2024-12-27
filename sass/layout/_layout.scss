@@ -3,6 +3,16 @@
 
 /** @section General layout */
 
+body {
+    color: var(--primary);
+    background: var(--primary-background);
+    padding: var(--overall-padding);
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        inline-size: var(--overall-size);
+        padding: initial;
+        margin: var(--overall-margin);
+    }
+}
 #header {
     margin-block-end: var(--header-margin);
 }
@@ -28,15 +38,5 @@
 .top-stories {
     @include css-media-queries($from-breakpoint: multicol-stories) {
         display: contents;
-    }
-}
-body {
-    color: var(--primary);
-    background: var(--primary-background);
-    padding: var(--overall-padding);
-    @include css-media-queries($from-breakpoint: multicol-stories) {
-        inline-size: var(--overall-size);
-        padding: initial;
-        margin: var(--overall-margin);
     }
 }
