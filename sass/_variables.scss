@@ -8,6 +8,7 @@
     --font: Inter, sans-serif;
     --text-size: #{px2rem(15)};
     --text-line-height: calc(26 / 15);
+    --menu-size: #{px2rem(18)};
     --hero-story-title-size: #{px2rem(40)};
     --hero-story-link-size: #{px2rem(14)};
     --hero-story-link-line-height: calc(24 / 14);
@@ -34,6 +35,7 @@
     --overall-size: calc(1110 / 1440 * 100dvi);
     --overall-padding: #{px2rem(28)} #{px2rem(16)};
     --header-margin: #{px2rem(32)};
+    --menu-gap: #{px2rem(24)};
     --content-inline-gap: #{px2rem(64)};
     --hero-story-gap: #{px2rem(29)} #{px2rem(30)};
     --hero-story-padding: #{px2rem(13)} #{px2rem(35)} #{px2rem(11)} #{px2rem(31)};
@@ -54,6 +56,7 @@
         --new-stories-title-size: #{px2rem(40)};
         --overall-margin: #{px2rem(89)} auto #{px2rem(129)};
         --header-margin: #{px2rem(55)};
+        --menu-gap: #{px2rem(40)};
         --content-block-gap: #{px2rem(30)};
         --content-inline-gap: #{px2rem(71)};
         --new-stories-padding: #{px2rem(32)} #{px2rem(24)};

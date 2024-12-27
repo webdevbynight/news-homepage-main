@@ -1,0 +1,31 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Menu */
+
+#menu {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--menu-gap);
+        list-style: none;
+    }
+    a {
+        color: inherit;
+        transition: color 300ms ease-in;
+        &:hover,
+        &:focus {
+            color: var(--senary);
+        }
+    }
+    @include css-media-queries($below-breakpoint: wide-menu) {
+        font-size: var(--menu-size);
+        line-height: 1.5;
+        color: var(--secondary);
+    }
+    @include css-media-queries($from-breakpoint: wide-menu) {
+        ul {
+            flex-direction: initial;
+        }
+    }
+}

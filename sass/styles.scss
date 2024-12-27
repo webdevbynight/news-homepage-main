@@ -10,6 +10,7 @@
 
 @use "./base/mixins" with (
     $media-queries-breakpoints: (
+        wide-menu: 600,
         multicol-stories: 882
     )
 );
@@ -19,6 +20,8 @@
 @use "./typo/font-face";
 @use "./typo/typo";
 @use "./layout/layout";
+@use "./header/header";
+@use "./header/menu";
 @use "./home/hero-story";
 @use "./home/new-stories";
 @use "./home/top-stories";
