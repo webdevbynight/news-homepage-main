@@ -1,0 +1,28 @@
+@charset "utf-8";
+@use "./base/functions" as *;
+@use "./base/mixins" as *;
+
+// Variables
+:root {
+    // Fonts
+    --font: Inter, sans-serif;
+    --text-size: #{px2rem(15)};
+    --text-line-height: calc(26 / 15);
+
+    // Colours
+    --primary: #5e607a;
+    --primary-background: #fffdfa;
+
+    // Sizes, gaps, padding, margins
+    --overall-size: calc(1110 / 1440 * 100dvi);
+    --overall-padding: #{px2rem(28)} #{px2rem(16)};
+    --header-margin: #{px2rem(32)};
+    --content-inline-gap: #{px2rem(64)};
+
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        --overall-margin: #{px2rem(89)} auto #{px2rem(129)};
+        --header-margin: #{px2rem(55)};
+        --content-block-gap: #{px2rem(30)};
+        --content-inline-gap: #{px2rem(71)};
+    }
+}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/** @section Typography */
+
+body {
+    font-family: var(--font);
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+}

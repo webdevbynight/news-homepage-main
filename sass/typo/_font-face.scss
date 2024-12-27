@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/** @section Font */
+
+@font-face {
+    font-family: Inter;
+    src: url("fonts/Inter-VariableFont_slnt,wght.woff2") format(woff2) tech(variations);
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+}

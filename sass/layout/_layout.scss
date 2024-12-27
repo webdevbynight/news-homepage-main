@@ -1,0 +1,42 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section General layout */
+
+#header {
+    margin-block-end: var(--header-margin);
+}
+#content {
+    > * {
+        margin-block-end: var(--content-inline-gap);
+    }
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--content-block-gap);
+        row-gap: var(--content-inline-gap);
+        > * {
+            margin-block-end: initial;
+        }
+    }
+}
+.hero-story {
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        grid-column: span 2;
+    }
+}
+.top-stories {
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        display: contents;
+    }
+}
+body {
+    color: var(--primary);
+    background: var(--primary-background);
+    padding: var(--overall-padding);
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        inline-size: var(--overall-size);
+        padding: initial;
+        margin: var(--overall-margin);
+    }
+}

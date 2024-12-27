@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// Default configuration
+
+// Browser support
+
+/// State of browser support
+/// 
+/// @type List
+$supported-browsers: (
+    firefox,
+    safari,
+    chrome,
+    firefox-android,
+    safari-ios
+);
+
+/// Firefox minimal version with ensured compatibility
+///
+/// @type Number
+$firefox: 133;
+
+/// Safari minimal version with ensured compatibility
+///
+/// @type Number
+$safari: 18.2;
+
+/// Google Chrome minimal version with ensured compatibility
+///
+/// @type Number
+$chrome: 131;
+
+/// Firefox Android minimal version with ensured compatibility
+///
+/// @type Number
+$firefox-android: 132;
+
+/// Safari iOS minimal version with ensured compatibility
+///
+/// @type Number
+$safari-ios: 18.2;
+
+/// Opera Mini minimal version with ensured compatibility
+///
+/// @type Number
+$opera-mini: 82;

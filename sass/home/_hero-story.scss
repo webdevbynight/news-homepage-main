@@ -1,0 +1,10 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Hero story */
+
+.hero-story {
+    @include css-media-queries($from-breakpoint: multicol-stories) {
+        grid-column: span 2;
+    }
+}

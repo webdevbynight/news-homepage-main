@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/**
+ * @site News homepage
+ * @author Victor Brito
+ */
+
+// Browser configuration
+@use "./base/config" as *;
+
+@use "./base/mixins" with (
+    $media-queries-breakpoints: (
+        multicol-stories: 768
+    )
+);
+@use "./variables";
+@use "./base/reset";
+@use "./base/print";
+@use "./typo/font-face";
+@use "./typo/typo";
+@use "./layout/layout";
+@use "./home/hero-story";
