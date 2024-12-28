@@ -3,6 +3,9 @@
 
 /** @section Menu */
 
+@mixin slide-menu {
+    transition: transform 300ms ease-in;
+}
 #menu {
     ul {
         display: flex;
@@ -19,13 +22,69 @@
         }
     }
     @include css-media-queries($below-breakpoint: wide-menu) {
-        font-size: var(--menu-size);
+        font-size: var(--menu-text-size);
         line-height: 1.5;
         color: var(--secondary);
+        .burger-menu + & {
+            position: fixed;
+            inset: 0;
+            ul {
+                background: var(--primary-background);
+                box-sizing: border-box;
+                inline-size: var(--menu-size);
+                padding: var(--menu-padding);
+                position: fixed;
+                inset-block: 0;
+                inset-inline-end: 0;
+            }
+        }
     }
     @include css-media-queries($from-breakpoint: wide-menu) {
         ul {
             flex-direction: initial;
+        }
+    }
+}
+.burger-menu {
+    display: inline-grid;
+    place-items: center;
+    border: none;
+    position: relative;
+    z-index: 1;
+    path {
+        fill: var(--secondary);
+        fill-rule: evenodd;
+    }
+    &.open {
+        // To avoid menu sliding on load or on resize
+        &:not(.first-load) {
+            + #menu ul {
+                @include slide-menu;
+            }
+        }
+        + #menu {
+            pointer-events: none;
+            ul {
+                transform: translateX(var(--menu-size));
+            }
+        }
+        .close {
+            display: none;
+        }
+    }
+    &.close {
+        position: fixed;
+        inset-block-start: var(--menu-inset-block);
+        inset-inline-end: var(--menu-inset-inline);
+        + #menu {
+            background: var(--quinary-background);
+            ul {
+                transform: translateX(0);
+                @include slide-menu;
+            }
+        }
+        .open {
+            display: none;
         }
     }
 }

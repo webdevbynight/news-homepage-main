@@ -4,11 +4,16 @@
 
 // Variables
 :root {
+    // Breakpoints for JS
+    @each $name, $value in $media-queries-breakpoints {
+        --breakpoint-#{$name}: #{$value};
+    }
+
     // Fonts
     --font: Inter, sans-serif;
     --text-size: #{px2rem(15)};
     --text-line-height: calc(26 / 15);
-    --menu-size: #{px2rem(18)};
+    --menu-text-size: #{px2rem(18)};
     --hero-story-title-size: #{px2rem(40)};
     --hero-story-link-size: #{px2rem(14)};
     --hero-story-link-line-height: calc(24 / 14);
@@ -30,12 +35,17 @@
     --secondary-background: #00001a;
     --tertiary-background: #f15d51;
     --quaternary-background: #5e607a;
+    --quinary-background: rgba(0 0 26 / .5);
 
     // Sizes, gaps, padding, margins
     --overall-size: calc(1110 / 1440 * 100dvi);
     --overall-padding: #{px2rem(28)} #{px2rem(16)};
     --header-margin: #{px2rem(32)};
+    --menu-size: calc(256 / 375 * 100dvi);
     --menu-gap: #{px2rem(24)};
+    --menu-padding: #{px2rem(144)} #{px2rem(24)};
+    --menu-inset-block: #{px2rem(32.5)};
+    --menu-inset-inline: #{px2rem(20.8)};
     --content-inline-gap: #{px2rem(64)};
     --hero-story-gap: #{px2rem(29)} #{px2rem(30)};
     --hero-story-padding: #{px2rem(13)} #{px2rem(35)} #{px2rem(11)} #{px2rem(31)};
